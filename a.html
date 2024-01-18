@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        body {
+    background-image: url(img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Text color on top of the background */
+}
+header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .menu-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 5px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      color:darkorange;
+    }
+
+    .menu-item:hover {
+      transform: scale(0.95);
+    }
+
+    .menu-item img {
+      width: 220px;
+      height: 200px;
+    }
+
+    .menu-item-content {
+      
+      text-align:center;
+    }
+
+    .menu-item h2 {
+      margin-top: 0;
+ 
+    }
+
+    .menu-item p {
+      margin-bottom: 0;
+      text
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay-content {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 8px;
+      color:gainsboro;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+    </style>
+    <script>
+        function showDetails(itemName, itemDescription) {
+          document.getElementById('overlay-content').innerHTML = `
+            <h2>${itemName}</h2>
+            <p>${itemDescription}</p>
+            <span class="close-btn" onclick="closeOverlay()">X</span>
+          `;
+          document.getElementById('overlay').style.display = 'flex';
+        }
+    
+        function closeOverlay() {
+          document.getElementById('overlay').style.display = 'none';
+        }
+      </script>
+</head>
+<header>
+    <h1>Restaurant Menu</h1>
+  </header>
+
+  <section>
+    <div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')">
+      <img src="Burger1.jpg" alt="burger" width="500" height="600">
+      <div class="menu-item-content">
+        <h2>Burger</h2>
+        <p style="background-color: #333;">Price:699</p>
+      </div>
+    </div>
+
+    
+        <div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+      <img src="m.jpg" alt="Momo" width="10px" 1>
+      <div class="menu-item-content">
+        <h2>MOMO</h2>
+        <p > Price:399</p>
+      </div>
+    </div>
+    <div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+      <img src="fire-and-ice.jpg" alt="Momo" width="10px" 1>
+      <div class="menu-item-content">
+        <h2>MOMO</h2>
+        <p > Price:399</p>
+      </div>
+    </div>
+</div>
+</div>  
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="chinese orange chicken.jpg" alt="Chinese Orange Chicken" width="10px" 1>
+  <div class="menu-item-content">
+    <h2>Chinese Chicken</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="aaa.jpeg" alt="Momo" width="10px" 1>
+  <div class="menu-item-content">
+    <h2>Cheese Pasta</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="cc.jpg" alt="Momo" width="10px" 1>
+  <div class="menu-item-content">
+    <h2>Chowmein</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="Marrikot.jpg" alt="Marriott" width="10px" 1>
+  <div class="menu-item-content">
+    <h2>Hot Chicken</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="Diplomat.jpg" alt="Diplomat" >
+  <div class="menu-item-content">
+    <h2>Tanduri Chicken</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+<div style="background-color: #333;"class="menu-item" onclick="showDetails('Your Order will be ready in 10 Minutes','Thank You')"> 
+  <img src="panner.jpg" alt="Marriott" width="10px" 1>
+  <div class="menu-item-content">
+    <h2>Paneer</h2>
+    <p > Price:399</p>
+  </div>
+</div>
+  </section>
+
+  <div id="overlay" class="overlay">
+    <div id="overlay-content" class="overlay-content"></div>
+  </div>
+</body>
+</html>
